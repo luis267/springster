@@ -3,7 +3,7 @@ package com.example.projeto;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.example.projeto") // <-- ADICIONE ISSO
 public class ProjetoApplication {
 
 	public static void main(String[] args) {

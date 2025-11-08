@@ -1,0 +1,7 @@
+com/example/projeto/config/WebConfig.class
+com/example/projeto/model/Pessoa.class
+com/example/projeto/repository/PessoaRepository.class
+com/example/projeto/controller/PessoaController.class
+com/example/projeto/controller/PessoaWebController.class
+com/example/projeto/ProjetoApplication.class
+com/example/projeto/service/PessoaService.class
