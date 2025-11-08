@@ -22,7 +22,7 @@
     <div class="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-2xl">
             <h1 class="mt-6 text-center text-3xl font-extrabold tracking-tight text-gray-900">
-                Aplicação Cliente (Web)
+                Aplicação Cliente (Web Separada)
             </h1>
             <p class="mt-2 text-center text-sm text-gray-600">
                 Consumindo a API REST do projeto Spring Boot.
@@ -102,11 +102,13 @@
     </div>
 
     <!-- Script JavaScript para interagir com a API -->
-    <script type_ ="module">
-        // Define a URL base da sua API.
-        // Como este arquivo será servido pela mesma aplicação Spring Boot,
-        // podemos usar um caminho relativo.
-        const API_BASE_URL = '/api/pessoas';
+    <script type="module">
+        // ===================================================================
+        // MUDANÇA IMPORTANTE AQUI:
+        // Usamos a URL completa do seu backend no Codespaces.
+        // (Encontrei essa URL no seu arquivo pessoa.http)
+        // ===================================================================
+        const API_BASE_URL = 'https://urban-space-goggles-p5xg47rww5pc7vqr-8080.app.github.dev/api/pessoas';
 
         // Seletores de elementos do DOM
         const form = document.getElementById('form-add-pessoa');
@@ -138,7 +140,7 @@
 
             } catch (error) {
                 console.error('Falha ao carregar pessoas:', error);
-                tabelaBody.innerHTML = `<tr><td colspan="3" class="text-center text-red-600 py-4">Erro ao carregar dados.</td></tr>`;
+                tabelaBody.innerHTML = `<tr><td colspan="3" class="text-center text-red-600 py-4">Erro ao carregar dados. Verifique se a API está no ar.</td></tr>`;
             } finally {
                 // Oculta o spinner e exibe a lista
                 loadingSpinner.classList.add('hidden');
